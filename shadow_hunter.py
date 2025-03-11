@@ -27,6 +27,8 @@ if __name__ == "__main__":
 
     # Validar assets antes de inicializar pygame
     if not Setup.validate_assets():
+        print("Error al validar los assets.")
+        exit
 
     try:
         # Si quieres saltarte el menú y probar directamente el juego:
