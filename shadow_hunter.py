@@ -9,7 +9,6 @@ from Game.game import Game
 
 def run_game():
     # pygame.mixer.music.stop()
-    print("Iniciando juego...")
 
     try:
         # Crear y ejecutar el juego
@@ -28,7 +27,6 @@ if __name__ == "__main__":
 
     # Validar assets antes de inicializar pygame
     if not Setup.validate_assets():
-        print("Usando gráficos simples en lugar de assets...")
 
     try:
         # Si quieres saltarte el menú y probar directamente el juego:
@@ -38,6 +36,5 @@ if __name__ == "__main__":
         surface = Theme.initialize()
         Theme.menu_loop(run_game)
     except Exception as e:
-        print(f"Error al iniciar el juego: {e}")
         import traceback
         traceback.print_exc()

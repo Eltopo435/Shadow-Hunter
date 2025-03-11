@@ -641,13 +641,11 @@ class Enemy:
         if manhattan_distance == 1:  # Solo inmediatamente arriba, abajo, izquierda o derecha
             # Verificar línea de visión directa (sin obstáculos)
             if self.has_line_of_sight(enemy_x, enemy_y, player_x, player_y):
-                print(
-                    f"Enemigo en ({enemy_x}, {enemy_y}) puede atacar al jugador en ({player_x}, {player_y})")
                 return True
         return False
 
     def attack_player(self):
         """Realiza la acción de atacar al jugador"""
         # Lógica de ataque; por ahora se simula con un print.
-        print("Enemy at ({}, {}) ataca al jugador.".format(self.pos_x, self.pos_y))
+       
         return True
